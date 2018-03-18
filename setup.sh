@@ -8,3 +8,7 @@ ln zshrc ~/.zshrc
 
 ln -s "$(pwd)/config/tmuxinator" ~/.config/tmuxinator
 ln -s "$(pwd)/vim" ~/.vim
+
+ls code | while read f ; do
+  ln -s "$(pwd)/code/$f" ~/Library/Application\ Support/Code/User/$f
+done

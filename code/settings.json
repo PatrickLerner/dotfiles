@@ -1,0 +1,35 @@
+{
+    "editor.fontSize": 15,
+    "editor.fontFamily": "Fira Code",
+    "editor.tabSize": 2,
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Visual Studio Light",
+    "editor.trimAutoWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "explorer.openEditors.visible": 0,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/tmp": true,
+      "**/log": true,
+      "**/node_modules": true,
+      "**/coverage": true
+    },
+    "search.exclude": {
+      "**/public/packs": true,
+      "**/node_modules": true,
+      "**/bower_components": true
+    },
+    "ruby.rubocop.executePath": "/Users/patrick/.rbenv/shims/",
+    "typescript.check.npmIsInstalled": false,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "window.zoomLevel": 0
+  }
