@@ -1,7 +1,7 @@
-# ~/.tmuxinator/instaffo.yml
+# ~/.tmuxinator/lea.yml
 
-name: instaffo
-root: ~/Projects/instaffo/Platform/Platform
+name: lea
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -11,15 +11,15 @@ root: ~/Projects/instaffo/Platform/Platform
 
 # Project hooks
 # Runs on project start, always
-on_project_start: code .
+# on_project_start: command
 # Run on project start, the first time
-on_project_first_start: (fswatch -1 tmp/pids/server.pid &>/dev/null; open -g http://localhost:3000/backend) &
+# on_project_first_start: command
 # Run on project start, after the first time
-# on_project_restart: open -g http://localhost:3000/backend
+# on_project_restart: command
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-on_project_stop: docker-compose down
+# on_project_stop: command
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -27,8 +27,11 @@ on_project_stop: docker-compose down
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
 
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: console
+# startup_window: editor
 
 # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
@@ -37,11 +40,16 @@ startup_window: console
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t instaffo
+# post: tmux -CC attach -t lea
 
 windows:
-  - docker: docker-compose up
-  - rails: git pull && bundle install && bundle exec rails s
-  - webpack: yarn && bin/webpack-dev-server
+  - editor:
+      layout: main-vertical
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - vim
+        - guard
+  - server: bundle exec rails s
   - logs: tail -f log/development.log
-  - console:

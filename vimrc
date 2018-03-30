@@ -14,20 +14,20 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-endwise'
 
 " Colors
-Plugin 'nanotech/jellybeans.vim'
+Plugin 'hauleth/blame.vim'
 
 " command t for quick navigation
 Plugin 'wincent/command-t'
 
 " syntax check
-Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()                " required
 filetype plugin indent on        " required
 
 syntax on                        " Enable syntax highlighting
-colorscheme jellybeans
+colorscheme blame
 set backspace=indent,eol,start   " allow backspacing over everything in insert mode
 
 set history=500		" keep 500 lines of command line history
@@ -56,14 +56,7 @@ set wildignore+=*/node_modules/*     " Don't search inside Node.js modules
 set wildignore+=*/tmp/*
 set wildignore+=*/public/*
 
-" syntastic options
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" ale
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:ale_open_list = 1
 
-let g:syntastic_ruby_checkers = ['rubocop']
