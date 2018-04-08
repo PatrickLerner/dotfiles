@@ -50,6 +50,9 @@ set gdefault            " assume the /g flag on :s substitutions to replace all 
 set autoindent          " always set autoindenting on
 set lazyredraw          " Don't redraw screen when running macros.
 set eol
+set wrap
+set linebreak
+set nolist              " list disables linebreak
 
 " command t options
 set wildignore+=*/node_modules/*     " Don't search inside Node.js modules

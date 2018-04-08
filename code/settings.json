@@ -31,5 +31,8 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "editor.formatOnPaste": true,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "files.associations": {
+      "*.json": "jsonc"
+    }
   }
