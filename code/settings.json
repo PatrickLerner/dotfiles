@@ -36,6 +36,7 @@
       "*.json": "jsonc"
     },
     "cSpell.userWords": [
+      "aleksey",
       "authentification",
       "backend",
       "deployable",

@@ -35,9 +35,6 @@ export EDITOR=vim
 
 eval "$(rbenv init -)"
 
-ssh-add ~/.ssh/id_rsa 2&>/dev/null
-ssh-add ~/.ssh/id_rsa_launchwerk 2&>/dev/null
-
 export DISABLE_AUTO_TITLE=true
 
 export NVM_DIR="$HOME/.nvm"

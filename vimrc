@@ -44,7 +44,6 @@ set smarttab
 set noincsearch
 set ignorecase smartcase
 set laststatus=2        " Always show status line.
-set relativenumber
 set number
 set gdefault            " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent          " always set autoindenting on
@@ -62,4 +61,9 @@ set wildignore+=*/public/*
 
 " ale
 " let g:ale_open_list = 1
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
