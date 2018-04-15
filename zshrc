@@ -25,10 +25,16 @@ export PATH=~/.bin:$PATH
 # aliases
 alias de="cd ~/Desktop"
 alias pingdad="ping 192.178.178.20"
-alias instaffo-start="tmuxinator start instaffo"
-alias instaffo-stop="tmuxinator stop instaffo"
-alias instaffo-lea-start="tmuxinator start instaffo-lea"
-alias instaffo-lea-stop="tmuxinator stop instaffo-lea"
+alias platform-start="tmuxinator start instaffo"
+alias platform-stop="tmuxinator stop instaffo"
+alias lea-start="tmuxinator start instaffo-lea"
+alias lea-stop="tmuxinator stop instaffo-lea"
+alias pp-start="tmuxinator start instaffo-people-processor"
+alias pp-stop="tmuxinator stop instaffo-people-processor"
+alias lapi-start="tmuxinator start instaffo-location-api"
+alias lapi-stop="tmuxinator stop instaffo-location-api"
+
+export PS1='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}$(shrink_path -f) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
 
 export PATH="$PATH:$HOME/Dropbox/Attic/bin"
 export EDITOR=vim
