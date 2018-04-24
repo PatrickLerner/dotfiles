@@ -10,6 +10,7 @@ antigen bundle docker
 antigen bundle yarn
 antigen bundle command-not-found
 antigen bundle shrink-path
+antigen bundle extract
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
