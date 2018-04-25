@@ -22,6 +22,9 @@ Plugin 'wincent/command-t'
 " syntax check
 Plugin 'w0rp/ale'
 
+" automatically create folders if needed
+Plugin 'pbrisbin/vim-mkdir'
+
 " All of your Plugins must be added before the following line
 call vundle#end()                " required
 filetype plugin indent on        " required

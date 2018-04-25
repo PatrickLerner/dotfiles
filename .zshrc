@@ -68,3 +68,14 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias pw='password-generator -l 24 -c'
+
+# No arguments: `git status`
+# With arguments: acts like `git`
+unalias g
+function g() {
+  if [[ $# -gt 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
+}
