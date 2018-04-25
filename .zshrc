@@ -41,7 +41,7 @@ export EDITOR=nvim
 alias nano=nvim
 alias vim=nvim
 alias nvim="rbenv shell 2.5.1 && nvim"
-
+export GREP_COLORS='mt=01;34'
 # alias ctags to use homebrew version
 alias ctags="`brew --prefix`/bin/ctags"
 
@@ -69,6 +69,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias pw='password-generator -l 24 -c'
+
+alias r='bin/rails'
 
 # No arguments: `git status`
 # With arguments: acts like `git`
