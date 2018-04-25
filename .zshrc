@@ -40,6 +40,7 @@ export PATH="$PATH:/Users/patrick/Dropbox/Attic/bin"
 export EDITOR=nvim
 alias nano=nvim
 alias vim=nvim
+alias nvim="rbenv shell 2.5.1 && nvim"
 
 # alias ctags to use homebrew version
 alias ctags="`brew --prefix`/bin/ctags"
