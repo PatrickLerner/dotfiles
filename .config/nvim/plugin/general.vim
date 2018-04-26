@@ -38,3 +38,6 @@ set backupdir=~/.vim/backups
 
 " vim should use system keyboard
 set clipboard=unnamed
+
+" remove useless whitespaces
+autocmd BufWritePre * %s/\s\+$//e

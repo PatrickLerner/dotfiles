@@ -22,4 +22,19 @@ call minpac#add('w0rp/ale')
 " automatically create folders if needed
 call minpac#add('pbrisbin/vim-mkdir')
 
+" quicker file search
+call minpac#add('mileszs/ack.vim')
+
+" vim gutter
+call minpac#add('airblade/vim-gitgutter')
+
+" surrounding brakets, quotes etc
+call minpac#add('tpope/vim-surround')
+
+" make surround repeatable
+call minpac#add('tpope/vim-repeat')
+
+" git plugin for blaming
+call minpac#add('tpope/vim-fugitive')
+
 filetype plugin indent on

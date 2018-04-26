@@ -17,4 +17,3 @@ syntax on                        " Enable syntax highlighting
 colorscheme one
 set background=dark
 set t_ut=
-
