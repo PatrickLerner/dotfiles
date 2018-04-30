@@ -12,6 +12,7 @@ call minpac#add('tpope/vim-endwise')
 
 " Colors
 call minpac#add('rakr/vim-one')
+call minpac#add('arcticicestudio/nord-vim')
 
 " command t for quick navigation
 call minpac#add('wincent/command-t')
@@ -36,5 +37,11 @@ call minpac#add('tpope/vim-repeat')
 
 " git plugin for blaming
 call minpac#add('tpope/vim-fugitive')
+
+" start screen
+call minpac#add('mhinz/vim-startify')
+
+" start screen
+call minpac#add('itchyny/lightline.vim')
 
 filetype plugin indent on

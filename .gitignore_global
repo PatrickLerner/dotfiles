@@ -3,3 +3,4 @@
 .docker
 .vscode
 tags
+.byebug_history

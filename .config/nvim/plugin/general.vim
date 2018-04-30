@@ -15,11 +15,11 @@ set et                  " convert tabs to spaces
 set sw=2
 set smarttab
 set noincsearch
+set cursorline
 
 set ignorecase smartcase
 set laststatus=2        " Always show status line.
 set number
-set relativenumber
 set gdefault            " assume the /g flag on :s substitutions to replace all matches in a line
 set autoindent          " always set autoindenting on
 set lazyredraw          " Don't redraw screen when running macros.
@@ -32,9 +32,6 @@ set hls is
 " natural split behavior
 set splitbelow
 set splitright
-
-set directory=~/.vim/tmp
-set backupdir=~/.vim/backups
 
 " vim should use system keyboard
 set clipboard=unnamed

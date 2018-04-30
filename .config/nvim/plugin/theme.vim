@@ -14,6 +14,12 @@ if (has("termguicolors"))
 endif
 
 syntax on                        " Enable syntax highlighting
-colorscheme one
+colorscheme nord
 set background=dark
-set t_ut=
+" set t_ut=
+
+let g:nord_comment_brightness = 12
+
+if !has('gui_running')
+  set t_Co=256
+endif
