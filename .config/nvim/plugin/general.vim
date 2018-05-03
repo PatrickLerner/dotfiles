@@ -38,3 +38,9 @@ set clipboard=unnamed
 
 " remove useless whitespaces
 autocmd BufWritePre * %s/\s\+$//e
+
+" map capital commands to lower case
+command WQ wq
+command Wq wq
+command W w
+command Q q

@@ -13,12 +13,12 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+let g:nord_comment_brightness = 12
+
 syntax on                        " Enable syntax highlighting
 colorscheme nord
 set background=dark
 " set t_ut=
-
-let g:nord_comment_brightness = 12
 
 if !has('gui_running')
   set t_Co=256

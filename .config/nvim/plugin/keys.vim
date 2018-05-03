@@ -27,3 +27,6 @@ nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+" use escape to leave terminal mode
+tnoremap <Esc> <C-\><C-n>
