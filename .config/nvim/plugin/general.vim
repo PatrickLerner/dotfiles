@@ -16,6 +16,7 @@ set sw=2
 set smarttab
 set noincsearch
 set cursorline
+set relativenumber
 
 set ignorecase smartcase
 set laststatus=2        " Always show status line.
@@ -44,3 +45,10 @@ command WQ wq
 command Wq wq
 command W w
 command Q q
+
+set showbreak=↪\
+set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set list!
+
+" automatically enter insert mode on new terminals
+autocmd TermOpen * startinsert

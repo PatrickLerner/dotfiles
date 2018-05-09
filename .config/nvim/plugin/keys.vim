@@ -30,3 +30,6 @@ vnoremap <S-Tab> <gv
 
 " use escape to leave terminal mode
 tnoremap <Esc> <C-\><C-n>
+
+" remap ; to act like :
+nnoremap ; :
