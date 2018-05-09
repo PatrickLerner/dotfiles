@@ -82,3 +82,5 @@ function g() {
     git status
   fi
 }
+
+ssh-add -K ~/.ssh/id_rsa &>/dev/null
