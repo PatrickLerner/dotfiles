@@ -40,6 +40,6 @@ startup_window: editor
 # post: tmux -CC attach -t instaffo
 
 windows:
-  - middleman: bin/middleman serve
   - editor: vim .
   - console:
+  - middleman: bin/middleman serve

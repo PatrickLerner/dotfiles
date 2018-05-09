@@ -40,9 +40,8 @@ startup_window: editor
 # post: tmux -CC attach -t instaffo-lea
 
 windows:
+  - editor: vim .
+  - console:
   - docker: docker-compose up
   - rails: bundle exec rails s
   - webpack: bin/webpack-dev-server
-  - logs: tail -f log/development.log
-  - editor: vim .
-  - console:
