@@ -14,8 +14,8 @@ call minpac#add('tpope/vim-endwise')
 call minpac#add('rakr/vim-one')
 call minpac#add('arcticicestudio/nord-vim')
 
-" command t for quick navigation
-call minpac#add('wincent/command-t')
+" ctrl p for quick navigation
+call minpac#add('kien/ctrlp.vim')
 
 " syntax check
 call minpac#add('w0rp/ale')
