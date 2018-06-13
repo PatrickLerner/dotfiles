@@ -52,3 +52,7 @@ set list!
 
 " automatically enter insert mode on new terminals
 autocmd TermOpen * startinsert
+
+" prevent accidentally saving files in a typo with ':w/' or similar
+:autocmd BufWritePre [:;\\']*
+\   try | echoerr 'Forbidden file name: ' . expand('<afile>') | endtry

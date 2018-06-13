@@ -15,7 +15,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " replace current selection with buffer when pressing r
 " while it is highlighted
-vmap r "_dPnnoremap <C-H> <C-W><C-H>
+vmap r "_dP"
 
 "make < > shifts keep selection
 vnoremap < <gv
