@@ -41,6 +41,11 @@ call minpac#add('tpope/vim-fugitive')
 " start screen
 call minpac#add('mhinz/vim-startify')
 
+" file manager changes
+call minpac#add('tpope/vim-vinegar')
+
+" start screen
+call minpac#add('itchyny/lightline.vim')
 " start screen
 call minpac#add('itchyny/lightline.vim')
 

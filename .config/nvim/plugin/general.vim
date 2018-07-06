@@ -35,7 +35,17 @@ set splitbelow
 set splitright
 
 " vim should use system keyboard
-set clipboard=unnamed
+" set clipboard=unnamed
+
+" use system keyboard if used with leader key
+nnoremap <Leader>y "+y
+nnoremap <Leader>d "+d
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p :set paste<CR>"+p:set nopaste<CR>
+nnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
+vnoremap <Leader>p :set paste<CR>"+p:set nopaste<CR>
+vnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
 
 " remove useless whitespaces
 autocmd BufWritePre * %s/\s\+$//e
@@ -56,3 +66,7 @@ autocmd TermOpen * startinsert
 " prevent accidentally saving files in a typo with ':w/' or similar
 :autocmd BufWritePre [:;\\']*
 \   try | echoerr 'Forbidden file name: ' . expand('<afile>') | endtry
+
+" global undo directory that is persisted after file closure
+set undodir=~/.vim/undodir
+set undofile
