@@ -45,3 +45,4 @@ windows:
   - docker: docker-compose up
   - rails: bundle exec rails s
   - webpack: bin/webpack-dev-server
+  - sidekiq: bin/sidekiq

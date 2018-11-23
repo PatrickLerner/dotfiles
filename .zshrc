@@ -71,6 +71,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias pw='password-generator -l 24 -c'
 
 alias r='bin/rails'
+alias update_project_list="find ~/Projects/Instaffo -name '.git' | sed 's/\/.git//'"
 
 # No arguments: `git status`
 # With arguments: acts like `git`
@@ -84,3 +85,7 @@ function g() {
 }
 
 ssh-add -K ~/.ssh/id_rsa &>/dev/null
+
+echo
+bonsai
+echo

@@ -3,7 +3,7 @@ let g:startify_custom_header = [
   \ ]
 
 function! s:list_projects()
-  let projects = systemlist('find ~/Projects/Instaffo -name ".git" | sed "s/\/.git//"')
+  let projects = systemlist('cat ~/Projects/Instaffo/.list')
   return projects
 endfunction
 

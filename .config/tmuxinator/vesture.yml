@@ -1,7 +1,7 @@
 # ~/.tmuxinator/instaffo-playbook.yml
 
-name: playbook
-root: ~/Projects/Instaffo/Wiki/Playbook
+name: vesture
+root: ~/Projects/PatrickLerner/vesture
 
 # Optional tmux socket
 # socket_name: foo
@@ -42,4 +42,4 @@ startup_window: editor
 windows:
   - editor: vim .
   - console:
-  - middleman: bin/middleman serve
+  - middleman: bin/middleman serve --bind-address=127.0.0.1

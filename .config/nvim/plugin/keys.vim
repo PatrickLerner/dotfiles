@@ -33,6 +33,7 @@ tnoremap <Esc> <C-\><C-n>
 
 " remap ; to act like :
 nnoremap ; :
+nnoremap : <Nop>
 
 " use leader + a for searching
 nnoremap <leader>a :Ack

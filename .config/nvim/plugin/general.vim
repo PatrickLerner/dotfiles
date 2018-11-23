@@ -55,6 +55,7 @@ command WQ wq
 command Wq wq
 command W w
 command Q q
+command E e
 
 set showbreak=↪\
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨

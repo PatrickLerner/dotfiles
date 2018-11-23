@@ -11,7 +11,6 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-endwise')
 
 " Colors
-call minpac#add('rakr/vim-one')
 call minpac#add('arcticicestudio/nord-vim')
 
 " ctrl p for quick navigation
@@ -43,10 +42,5 @@ call minpac#add('mhinz/vim-startify')
 
 " file manager changes
 call minpac#add('tpope/vim-vinegar')
-
-" start screen
-call minpac#add('itchyny/lightline.vim')
-" start screen
-call minpac#add('itchyny/lightline.vim')
 
 filetype plugin indent on

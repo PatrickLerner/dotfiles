@@ -1,7 +1,7 @@
-# ~/.tmuxinator/instaffo-playbook.yml
+# ~/.tmuxinator/instaffo.yml
 
-name: playbook
-root: ~/Projects/Instaffo/Wiki/Playbook
+name: ICOApp
+root: ~/Projects/Instaffo/ICO/ICOApp/
 
 # Optional tmux socket
 # socket_name: foo
@@ -13,13 +13,13 @@ root: ~/Projects/Instaffo/Wiki/Playbook
 # Runs on project start, always
 # on_project_start: code .
 # Run on project start, the first time
-on_project_first_start: (sleep 15; open -g http://localhost:4567) &
+on_project_first_start: (fswatch -1 tmp/pids/server.pid &>/dev/null; open -g http://localhost:3000/) &
 # Run on project start, after the first time
 # on_project_restart: open -g http://localhost:3000/backend
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-# on_project_stop: docker-compose down
+on_project_stop: docker-compose down
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -42,4 +42,6 @@ startup_window: editor
 windows:
   - editor: vim .
   - console:
-  - middleman: bin/middleman serve
+  - docker: docker-compose up
+  - rails: bundle exec rails s
+  - webpack: bin/webpack-dev-server
