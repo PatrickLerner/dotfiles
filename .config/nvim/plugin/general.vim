@@ -12,8 +12,10 @@ set backupdir=~/.tmp
 set directory=~/.tmp    " Don't clutter my dirs up with swp and tmp files
 set autoread
 set et                  " convert tabs to spaces
-set sw=2
+set shiftwidth=2
 set smarttab
+set tabstop=2
+set softtabstop=2
 set noincsearch
 set cursorline
 set relativenumber
@@ -37,25 +39,8 @@ set splitright
 " vim should use system keyboard
 " set clipboard=unnamed
 
-" use system keyboard if used with leader key
-nnoremap <Leader>y "+y
-nnoremap <Leader>d "+d
-vnoremap <Leader>y "+y
-vnoremap <Leader>d "+d
-nnoremap <Leader>p :set paste<CR>"+p:set nopaste<CR>
-nnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
-vnoremap <Leader>p :set paste<CR>"+p:set nopaste<CR>
-vnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
-
 " remove useless whitespaces
 autocmd BufWritePre * %s/\s\+$//e
-
-" map capital commands to lower case
-command WQ wq
-command Wq wq
-command W w
-command Q q
-command E e
 
 set showbreak=↪\
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨

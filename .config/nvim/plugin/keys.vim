@@ -37,3 +37,27 @@ nnoremap : <Nop>
 
 " use leader + a for searching
 nnoremap <leader>a :Ack
+
+" clear highlights with leader + space
+nnoremap <leader><space> :nohlsearch<CR>
+
+" ale navigation
+nnoremap <silent> <C-N> :ALENextWrap<CR>
+nnoremap <silent> <S-C-N> :ALEPreviousWrap<CR>
+
+" use system keyboard if used with leader key
+nnoremap <Leader>y "+y
+nnoremap <Leader>d "+d
+vnoremap <Leader>y "+y
+vnoremap <Leader>d "+d
+nnoremap <Leader>p :set paste<CR>"+p:set nopaste<CR>
+nnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
+vnoremap <Leader>p :set paste<CR>"+p:set nopaste<CR>
+vnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
+
+" map capital commands to lower case
+command WQ wq
+command Wq wq
+command W w
+command Q q
+command E e
