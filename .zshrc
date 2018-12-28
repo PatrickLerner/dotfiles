@@ -36,7 +36,7 @@ done
 export PS1='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}$(shrink_path -f) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
 
 export LANG="C"
-export PATH="$PATH:/Users/patrick/Dropbox/Attic/bin"
+export PATH="$PATH:/Users/patrick/Google Drive/Attic/bin"
 export EDITOR=nvim
 alias nano=nvim
 alias vim=nvim

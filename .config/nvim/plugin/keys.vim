@@ -55,6 +55,8 @@ nnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
 vnoremap <Leader>p :set paste<CR>"+p:set nopaste<CR>
 vnoremap <Leader>P :set paste<CR>"+P:set nopaste<CR>
 
+nnoremap <Leader>v :vsp<CR>
+
 " map capital commands to lower case
 command WQ wq
 command Wq wq
