@@ -36,7 +36,6 @@ call minpac#add('tpope/vim-repeat')
 
 " git plugin for blaming
 call minpac#add('tpope/vim-fugitive')
-call minpac#add('junegunn/gv.vim')
 
 " start screen
 call minpac#add('mhinz/vim-startify')
@@ -46,9 +45,6 @@ call minpac#add('tpope/vim-vinegar')
 
 " some unix file operations on current file
 call minpac#add('tpope/vim-eunuch')
-
-" ruby block selector
-call minpac#add('macros/matchit.vim')
 
 " lightline
 call minpac#add('itchyny/lightline.vim')

@@ -1,7 +1,7 @@
 # ~/.tmuxinator/instaffo.yml
 
-name: Suite
-root: ~/Projects/Instaffo/Product/Platform/Suite
+name: FAME
+root: ~/Projects/Instaffo/Product/FAME/fame
 
 # Optional tmux socket
 # socket_name: foo
@@ -13,7 +13,7 @@ root: ~/Projects/Instaffo/Product/Platform/Suite
 # Runs on project start, always
 # on_project_start: code .
 # Run on project start, the first time
-on_project_first_start: (fswatch -1 tmp/pids/server.pid &>/dev/null; open -g http://localhost:3000/backoffice) &
+# on_project_first_start: (fswatch -1 tmp/pids/server.pid &>/dev/null; open -g http://localhost:3000/backoffice) &
 # Run on project start, after the first time
 # on_project_restart: open -g http://localhost:3000/backend
 # Run on project exit ( detaching from tmux session )
@@ -42,7 +42,5 @@ startup_window: editor
 windows:
   - editor: vim .
   - console:
-  - docker: docker-compose up elasticsearch redis mysql
+  - docker: docker-compose up
   - rails: bundle exec rails s
-  - webpack: bin/webpack-dev-server
-  - sidekiq: bin/sidekiq

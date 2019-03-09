@@ -26,6 +26,8 @@ export PATH=~/.bin:$PATH:/usr/local/bin
 
 # aliases
 alias de="cd ~/Desktop"
+alias ls="exa"
+alias cat="bat"
 
 ls ~/.config/tmuxinator | while read f ; do
   cmd="$(basename "$f" .yml)"
