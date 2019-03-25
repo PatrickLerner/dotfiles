@@ -1,7 +1,7 @@
 # ~/.tmuxinator/instaffo.yml
 
 name: Suite
-root: ~/Projects/Instaffo/Product/Platform/Suite
+root: ~/Projects/Instaffo/Product/Platform/suite
 
 # Optional tmux socket
 # socket_name: foo

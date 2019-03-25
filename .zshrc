@@ -1,4 +1,5 @@
-source /Users/patrick/.zsh/antigen/antigen.zsh
+source ~/.zsh/antigen/antigen.zsh
+source ~/.secrets
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -91,3 +92,6 @@ ssh-add -K ~/.ssh/id_rsa &>/dev/null
 echo
 bonsai
 echo
+
+export HOMEBREW_NO_ANALYTICS=1
+export PATH=/usr/local/Cellar/openssl/1.0.2r/bin:$PATH
