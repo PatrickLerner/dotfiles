@@ -13,8 +13,6 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-let g:nord_comment_brightness = 12
-
 syntax on                        " Enable syntax highlighting
 colorscheme nord
 set background=dark

@@ -50,4 +50,7 @@ call minpac#add('tpope/vim-eunuch')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('maximbaz/lightline-ale')
 
+" smooth scroll
+call minpac#add('yuttie/comfortable-motion.vim')
+
 filetype plugin indent on
