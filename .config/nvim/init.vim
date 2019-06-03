@@ -53,4 +53,10 @@ call minpac#add('maximbaz/lightline-ale')
 " smooth scroll
 call minpac#add('yuttie/comfortable-motion.vim')
 
+" auto close braket pairs
+call minpac#add('jiangmiao/auto-pairs')
+
+" Intellisense
+call minpac#add('neoclide/coc.nvim')
+
 filetype plugin indent on
