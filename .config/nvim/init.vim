@@ -16,9 +16,6 @@ call minpac#add('arcticicestudio/nord-vim')
 " ctrl p for quick navigation
 call minpac#add('kien/ctrlp.vim')
 
-" syntax check
-call minpac#add('w0rp/ale')
-
 " automatically create folders if needed
 call minpac#add('pbrisbin/vim-mkdir')
 
@@ -53,10 +50,10 @@ call minpac#add('maximbaz/lightline-ale')
 " smooth scroll
 call minpac#add('yuttie/comfortable-motion.vim')
 
-" auto close braket pairs
-call minpac#add('jiangmiao/auto-pairs')
-
 " Intellisense
 call minpac#add('neoclide/coc.nvim')
+
+" syntax check
+call minpac#add('w0rp/ale')
 
 filetype plugin indent on
