@@ -67,6 +67,7 @@ function git_prompt_info() {
 }
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/opt/node@8/bin:$PATH"
@@ -89,13 +90,15 @@ function g() {
 
 ssh-add -K ~/.ssh/id_rsa &>/dev/null
 
-echo
-bonsai
-echo
-
+export LC_ALL='en_US.UTF-8'
 export HOMEBREW_NO_ANALYTICS=1
 export PATH=/usr/local/Cellar/openssl/1.0.2r/bin:$PATH
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 
-export LC_ALL='en_US.UTF-8'
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+# python poetry stuff
+source $HOME/.poetry/env
+alias poetry="python3 $HOME/.poetry/bin/poetry"
+
+echo
+bonsai
+echo
