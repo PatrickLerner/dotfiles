@@ -87,10 +87,13 @@ function g() {
     git status
   fi
 }
+# show zsh completion for g
+compdef g='git'
 
 ssh-add -K ~/.ssh/id_rsa &>/dev/null
 
 export LC_ALL='en_US.UTF-8'
+export LANG=en_US.UTF-8
 export HOMEBREW_NO_ANALYTICS=1
 export PATH=/usr/local/Cellar/openssl/1.0.2r/bin:$PATH
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
@@ -98,7 +101,3 @@ export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 # python poetry stuff
 source $HOME/.poetry/env
 alias poetry="python3 $HOME/.poetry/bin/poetry"
-
-echo
-bonsai
-echo
