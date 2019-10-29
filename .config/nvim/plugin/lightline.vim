@@ -1,5 +1,8 @@
 let g:lightline = {
   \ 'colorscheme': 'nord',
+  \ 'component_function': {
+  \   'filename': 'LightlineFilename',
+  \ }
   \ }
 
 let g:lightline.component_expand = {
@@ -24,3 +27,16 @@ let g:lightline.active = {
       \         [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]
       \     ]
       \ }
+
+function! LightlineFilename()
+  let path = expand('%:p')
+  let fn = expand('%:t')
+  let dir = expand('%:p:h:h')
+
+  if fn =~ '^index'
+    " also display folder name
+    return path[len(dir)+1:]
+  end
+
+  return fn
+endfunction

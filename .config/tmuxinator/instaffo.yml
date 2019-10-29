@@ -1,7 +1,7 @@
-# ~/.tmuxinator/instaffo.yml
+# ~/.tmuxinator/instaffo-instaffo.yml
 
-name: people-processor
-root: ~/Projects/Instaffo/Backbone/PeopleProcessor/PeopleProcessor
+name: instaffo
+root: ~/Projects/Instaffo/Pages/instaffo.com
 
 # Optional tmux socket
 # socket_name: foo
@@ -13,13 +13,13 @@ root: ~/Projects/Instaffo/Backbone/PeopleProcessor/PeopleProcessor
 # Runs on project start, always
 # on_project_start: code .
 # Run on project start, the first time
-# on_project_first_start: (fswatch -1 tmp/pids/server.pid &>/dev/null; open -g http://localhost:3000/backend) &
+on_project_first_start: (sleep 15; open -g http://localhost:4567) &
 # Run on project start, after the first time
 # on_project_restart: open -g http://localhost:3000/backend
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-on_project_stop: docker-compose down
+# on_project_stop: docker-compose down
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -42,4 +42,4 @@ startup_window: editor
 windows:
   - editor: vim .
   - console:
-  - docker: docker-compose up
+  - middleman: bin/middleman serve

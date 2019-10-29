@@ -4,6 +4,7 @@ let g:ale_linters = {
 \  'ruby': ['rubocop'],
 \  'haskell': ['ghc', 'hlint'],
 \  'javascript': ['eslint'],
+\  'javascriptreact': ['eslint'],
 \}
 
 let g:ale_sign_error = "!"
