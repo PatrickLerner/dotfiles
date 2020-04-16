@@ -33,7 +33,7 @@ function! LightlineFilename()
   let fn = expand('%:t')
   let dir = expand('%:p:h:h')
 
-  if fn =~ '^index'
+  if fn =~ '^index' || fn =~ '^mod.rs' || fn =~ '^tests.rs'
     " also display folder name
     return path[len(dir)+1:]
   end

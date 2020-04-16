@@ -92,6 +92,9 @@ compdef g='git'
 
 ssh-add -K ~/.ssh/id_rsa &>/dev/null
 
+# do not add cmd to history if it starts with a space
+setopt histignorespace
+
 export LC_ALL='en_US.UTF-8'
 export LANG=en_US.UTF-8
 export HOMEBREW_NO_ANALYTICS=1
@@ -101,3 +104,17 @@ export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 # python poetry stuff
 source $HOME/.poetry/env
 alias poetry="python3 $HOME/.poetry/bin/poetry"
+
+export GOPATH=/Users/patrick/.go
+export GOBIN=$GOPATH/bin
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+alias dockerlatex='exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu'
+
+alias fix_elasticsearch="curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/_all/_settings -d '{\"index.blocks.read_only_allow_delete\": null}'"

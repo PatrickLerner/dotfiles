@@ -47,16 +47,17 @@ call minpac#add('tpope/vim-eunuch')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('maximbaz/lightline-ale')
 
-" smooth scroll
-call minpac#add('yuttie/comfortable-motion.vim')
-
 " Intellisense
 " call minpac#add('neoclide/coc.nvim')
 
 " Prettier
-call minpac#add('prettier/vim-prettier', {'do': 'yarn install'})
+call minpac#add('prettier/vim-prettier', {'do': 'yarn install; yarn add @prettier/plugin-ruby'})
 
 " syntax check
 call minpac#add('w0rp/ale')
+
+call minpac#add('rust-lang/rust.vim')
+
+call minpac#add('tikhomirov/vim-glsl')
 
 filetype plugin indent on

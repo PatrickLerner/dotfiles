@@ -13,13 +13,13 @@ root: ~/Projects/Instaffo/Product/Platform/suite
 # Runs on project start, always
 # on_project_start: code .
 # Run on project start, the first time
-on_project_first_start: (fswatch -1 tmp/pids/server.pid &>/dev/null; open -g http://localhost:3000/backoffice) &
+on_project_first_start: (fswatch -1 tmp/pids/server.pid &>/dev/null && open -g http://localhost:3000/backoffice) &
 # Run on project start, after the first time
 # on_project_restart: open -g http://localhost:3000/backend
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-on_project_stop: docker-compose down
+on_project_stop: bin/rails runner "Sidekiq.redis(&:flushall)"; docker-compose down
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -45,4 +45,4 @@ windows:
   - docker: docker-compose up elasticsearch redis mysql
   - rails: bundle exec rails s
   - webpack: bin/webpack-dev-server
-  - sidekiq: bin/sidekiq
+  - sidekiq: bin/rails runner "Sidekiq.redis(&:flushall)" && bin/sidekiq

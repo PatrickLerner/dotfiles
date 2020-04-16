@@ -12,8 +12,8 @@ set backupdir=~/.tmp
 set directory=~/.tmp    " Don't clutter my dirs up with swp and tmp files
 set autoread
 set et                  " convert tabs to spaces
-set shiftwidth=2
 set smarttab
+set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set noincsearch
@@ -56,3 +56,10 @@ autocmd TermOpen * startinsert
 " global undo directory that is persisted after file closure
 set undodir=~/.vim/undodir
 set undofile
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
