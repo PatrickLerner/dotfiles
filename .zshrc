@@ -29,6 +29,7 @@ export PATH=~/.bin:$PATH:/usr/local/bin
 alias de="cd ~/Desktop"
 alias ls="exa"
 alias cat="bat"
+alias bro="tldr"
 
 ls ~/.config/tmuxinator | while read f ; do
   cmd="$(basename "$f" .yml)"
@@ -41,9 +42,10 @@ export PS1='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}$(
 export LANG="C"
 export PATH="$PATH:/Users/patrick/Google Drive/Attic/bin"
 export EDITOR=nvim
+alias real_nano=/usr/bin/nano
 alias nano=nvim
 alias vim=nvim
-alias nvim="rbenv shell 2.5.1 && nvim"
+alias nvim="rbenv shell 2.7.2 && nvim"
 export GREP_COLORS='mt=01;34'
 # alias ctags to use homebrew version
 alias ctags="`brew --prefix`/bin/ctags"
@@ -117,4 +119,12 @@ fi
 
 alias dockerlatex='exec docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu'
 
-alias fix_elasticsearch="curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/_all/_settings -d '{\"index.blocks.read_only_allow_delete\": null}'"
+alias fix_elasticsearch="curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/_cluster/settings -d '{ \"transient\": { \"cluster.routing.allocation.disk.threshold_enabled\": false } }' && curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/_all/_settings -d '{\"index.blocks.read_only_allow_delete\": null}'"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/patrick/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/patrick/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/patrick/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrick/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+set_iterm_title "iTerm"

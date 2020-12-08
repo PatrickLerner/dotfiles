@@ -10,6 +10,9 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " automatically close end
 call minpac#add('tpope/vim-endwise')
 
+" sensible defaults
+call minpac#add('tpope/vim-sensible')
+
 " Colors
 call minpac#add('arcticicestudio/nord-vim')
 
@@ -51,7 +54,7 @@ call minpac#add('maximbaz/lightline-ale')
 " call minpac#add('neoclide/coc.nvim')
 
 " Prettier
-call minpac#add('prettier/vim-prettier', {'do': 'yarn install; yarn add @prettier/plugin-ruby'})
+call minpac#add('prettier/vim-prettier', {'do': 'yarn install', 'rev': 'issue/232-adding-support-for-prettier-2.x'})
 
 " syntax check
 call minpac#add('w0rp/ale')

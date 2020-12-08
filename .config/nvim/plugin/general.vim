@@ -62,4 +62,6 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+set wildignore+=.DS_Store
+set wildignore+=.git/
+set wildignore+=node_modules/

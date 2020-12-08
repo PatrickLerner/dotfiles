@@ -13,10 +13,14 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
+let g:nord_bold = 1
+let g:nord_italic = 1
+let g:nord_underline = 1
+let g:nord_bold_vertical_split_line = 1
+
 syntax on                        " Enable syntax highlighting
 colorscheme nord
 set background=dark
-" set t_ut=
 
 if !has('gui_running')
   set t_Co=256
