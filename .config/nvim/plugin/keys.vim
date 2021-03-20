@@ -69,6 +69,7 @@ nnoremap <Leader>0 10gt
 nnoremap <Leader>n :tabnew<CR>
 
 nnoremap <Leader>v :vsp<CR>
+nnoremap <Leader>b :new<CR>
 
 " map capital commands to lower case
 command WQ wq

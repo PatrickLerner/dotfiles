@@ -1,0 +1,6 @@
+{
+  "typescript.validate.enable": true,
+  "cSpell.userWords": [
+    "gitlab"
+  ]
+}

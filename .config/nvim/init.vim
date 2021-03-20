@@ -52,12 +52,12 @@ call minpac#add('itchyny/lightline.vim')
 call minpac#add('maximbaz/lightline-ale')
 
 " Intellisense
-" call minpac#add('neoclide/coc.nvim')
+call minpac#add('neoclide/coc.nvim')
 
 call minpac#add('christoomey/vim-titlecase')
 
 " Prettier
-call minpac#add('prettier/vim-prettier', {'do': 'yarn install', 'rev': 'issue/232-adding-support-for-prettier-2.x'})
+call minpac#add('prettier/vim-prettier', {'do': 'yarn install' })
 
 " syntax check
 call minpac#add('w0rp/ale')
