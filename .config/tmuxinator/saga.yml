@@ -1,25 +1,30 @@
-# ~/.tmuxinator/instaffo.yml
+# /Users/patrick/.config/tmuxinator/saga.yml
 
-name: Suite
-root: ~/Projects/Instaffo/Product/Platform/suite
+name: saga
+root: ~/Projects/saga/
 
 # Optional tmux socket
 # socket_name: foo
 
-# Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
 
 # Project hooks
+
 # Runs on project start, always
-# on_project_start: code .
+# on_project_start: command
+
 # Run on project start, the first time
-on_project_first_start: set_iterm_title "Instaffo App" && (fswatch -1 tmp/pids/ &>/dev/null && open -g http://localhost:3000/backoffice) &
+# on_project_first_start: command
+
 # Run on project start, after the first time
-# on_project_restart: open -g http://localhost:3000/backend
+# on_project_restart: command
+
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
+
 # Run on project stop
-on_project_stop: bin/rails runner "Sidekiq.redis(&:flushall)"; docker-compose down
+# on_project_stop: command
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -27,8 +32,11 @@ on_project_stop: bin/rails runner "Sidekiq.redis(&:flushall)"; docker-compose do
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
 
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
 # Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-startup_window: editor
+# startup_window: editor
 
 # Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
 # startup_pane: 1
@@ -36,15 +44,8 @@ startup_window: editor
 # Controls whether the tmux session should be attached to automatically. Defaults to true.
 # attach: false
 
-# Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t instaffo
-
 windows:
-  - editor: vim .
+  - game: vim games/venexia
   - console:
   - console:
-  - docker: docker-compose up elasticsearch redis mysql
-  - rails: bundle exec rails s
-  - webpack: bin/webpack-dev-server
-  - cable: bin/cable
-  # - sidekiq: bin/rails runner "Sidekiq.redis(&:flushall)" && bin/sidekiq
+  - engine: vim .

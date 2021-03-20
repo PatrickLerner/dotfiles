@@ -1,5 +1,9 @@
 import React from 'react'
+import {} from 'prop-types'
 
-export default props => (
-  <div {...props} />
-)
+function Component(props) {
+  return <></>
+}
+Component.propTypes = {}
+
+export default Component
