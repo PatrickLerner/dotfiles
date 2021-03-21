@@ -45,7 +45,10 @@ root: ~/Projects/saga/
 # attach: false
 
 windows:
-  - game: vim games/venexia
+  - game:
+      - cd games/venexia
+      - vim .
   - console:
+      - cd games/venexia
   - console:
   - engine: vim .

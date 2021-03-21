@@ -1,6 +1,12 @@
 {
   "typescript.validate.enable": true,
-  "cSpell.userWords": [
-    "gitlab"
-  ]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "json",
+    "javascript",
+    "javascriptreact",
+    "yaml"
+  ],
+  "cSpell.userWords": ["freetype", "gitlab", "glutin", "opengl", "backoffice"]
 }
