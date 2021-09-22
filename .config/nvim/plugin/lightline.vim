@@ -40,3 +40,17 @@ function! LightlineFilename()
 
   return fn
 endfunction
+
+function! LightMode()
+  let g:lightline.colorscheme='onehalflight'
+  colorscheme onehalflight
+  call lightline#toggle()
+  call lightline#toggle()
+endfunction
+
+function! DarkMode()
+  let g:lightline.colorscheme='nord'
+  colorscheme nord
+  call lightline#toggle()
+  call lightline#toggle()
+endfunction

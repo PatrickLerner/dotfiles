@@ -19,7 +19,7 @@ on_project_first_start: set_iterm_title "Instaffo App" && (fswatch -1 tmp/pids/ 
 # Run on project exit ( detaching from tmux session )
 # on_project_exit: command
 # Run on project stop
-on_project_stop: bin/rails runner "Sidekiq.redis(&:flushall)"; docker-compose down
+# on_project_stop: bin/rails runner "Sidekiq.redis(&:flushall)"; docker-compose down
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -43,7 +43,7 @@ windows:
   - editor: vim .
   - console:
   - console:
-  - docker: docker-compose up elasticsearch redis mysql
+  # - docker: docker-compose up elasticsearch redis mysql
   - rails: bundle exec rails s
   - webpack: bin/webpack-dev-server
   - cable: bin/cable

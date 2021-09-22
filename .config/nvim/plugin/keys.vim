@@ -42,8 +42,8 @@ nnoremap <leader>a :Ack
 nnoremap <leader><space> :nohlsearch<CR>
 
 " ale navigation
-nnoremap <silent> <C-C-N> :ALENextWrap<CR>
-nnoremap <silent> <S-N> :ALEPreviousWrap<CR>
+" nnoremap <silent> <C-C-N> :ALENextWrap<CR>
+" nnoremap <silent> <S-N> :ALEPreviousWrap<CR>
 
 " use system keyboard if used with leader key
 nnoremap <Leader>y "+y

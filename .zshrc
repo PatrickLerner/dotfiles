@@ -127,4 +127,13 @@ if [ -f '/Users/patrick/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/patrick/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrick/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-set_iterm_title "iTerm"
+set_iterm_title ""
+
+export PATH="$HOME/.poetry/bin:$PATH"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+export ANDROID_SDK_ROOT=~/Library/Android/sdk
+export ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk/23.0.7599858
+export NDK_HOME=$ANDROID_NDK_ROOT
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools

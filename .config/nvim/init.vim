@@ -15,9 +15,13 @@ call minpac#add('tpope/vim-sensible')
 
 " Colors
 call minpac#add('arcticicestudio/nord-vim')
+call minpac#add('sonph/onehalf', {'subdir': 'vim/'})
+call minpac#add('arzg/vim-corvine')
 
 " ctrl p for quick navigation
-call minpac#add('kien/ctrlp.vim')
+" call minpac#add('kien/ctrlp.vim')
+call minpac#add('nvim-lua/plenary.nvim')
+call minpac#add('nvim-telescope/telescope.nvim')
 
 " automatically create folders if needed
 call minpac#add('pbrisbin/vim-mkdir')
@@ -49,7 +53,7 @@ call minpac#add('tpope/vim-eunuch')
 
 " lightline
 call minpac#add('itchyny/lightline.vim')
-call minpac#add('maximbaz/lightline-ale')
+" call minpac#add('maximbaz/lightline-ale')
 
 " Intellisense
 call minpac#add('neoclide/coc.nvim')
@@ -64,6 +68,8 @@ call minpac#add('w0rp/ale')
 
 call minpac#add('rust-lang/rust.vim')
 
-call minpac#add('tikhomirov/vim-glsl')
+call minpac#add('honza/vim-snippets')
+
+call minpac#add('towolf/vim-helm')
 
 filetype plugin indent on
