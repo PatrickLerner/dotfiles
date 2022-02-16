@@ -40,7 +40,7 @@ done
 export PS1='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}$(shrink_path -f) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
 
 export LANG="C"
-export PATH="$PATH:/Users/patrick/Google Drive/Attic/bin"
+# export PATH="$PATH:/Users/patrick/Google Drive/Attic/bin"
 export EDITOR=nvim
 alias real_nano=/usr/bin/nano
 alias nano=nvim
@@ -137,3 +137,4 @@ export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk/23.0.7599858
 export NDK_HOME=$ANDROID_NDK_ROOT
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH="/usr/local/opt/node@14/bin:$PATH"
