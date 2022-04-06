@@ -45,6 +45,10 @@ call minpac#add('shumphrey/fugitive-gitlab.vim')
 " start screen
 call minpac#add('mhinz/vim-startify')
 
+" pencil
+call minpac#add('preservim/vim-pencil')
+call minpac#add('junegunn/goyo.vim')
+
 " file manager changes
 call minpac#add('tpope/vim-vinegar')
 

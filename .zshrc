@@ -12,6 +12,8 @@ antigen bundle yarn
 antigen bundle command-not-found
 antigen bundle shrink-path
 antigen bundle extract
+antigen bundle kubectl
+antigen bundle Kube-ps1
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -37,7 +39,9 @@ ls ~/.config/tmuxinator | while read f ; do
   alias "${cmd}-stop"="tmuxinator stop ${cmd}"
 done
 
-export PS1='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}$(shrink_path -f) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
+export PROMPT='%(!.%B%F{red}.%B%F{green}%n@)%m %F{blue}$(shrink_path -f) $(git_prompt_info)%F{blue}%(!.#.$)%k%b%f '
+
+# export PS1='%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}%n@)%m %{$fg_bold[blue]%}$(shrink_path -f) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
 
 export LANG="C"
 # export PATH="$PATH:/Users/patrick/Google Drive/Attic/bin"
@@ -60,24 +64,23 @@ export NVM_DIR="$HOME/.nvm"
 
 function git_prompt_info() {
   local ref
+  local full
+  export ZSH_THEME_GIT_PROMPT_PREFIX="%F{magenta}(%F{green}"
+  export ZSH_THEME_GIT_PROMPT_SUFFIX="%F{magenta})%F{blue} "
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
-    ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
-    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
-    ref=$(echo $ref | cut -c 1-35)
+    full=$(command git symbolic-ref HEAD 2> /dev/null) || \
+    full=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+    ref=$(echo $full | cut -c 1-35)
+    if [[ "$ref" != "$full" ]]; then
+      ref="${ref}…"
+    fi
     echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
   fi
 }
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="/usr/local/opt/node@10/bin:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-alias pw='password-generator -l 24 -c'
-
-alias r='bin/rails'
-alias update_project_list="find ~/Projects/Instaffo -name '.git' | sed 's/\/.git//'"
 
 # No arguments: `git status`
 # With arguments: acts like `git`
@@ -102,15 +105,12 @@ export LANG=en_US.UTF-8
 export HOMEBREW_NO_ANALYTICS=1
 export PATH=/usr/local/Cellar/openssl/1.0.2r/bin:$PATH
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+export PATH="/Users/patrick/Library/Python/3.9/bin:$PATH"
 
 # python poetry stuff
-source $HOME/.poetry/env
-alias poetry="python3 $HOME/.poetry/bin/poetry"
+# source $HOME/.poetry/env
+# alias poetry="python3 $HOME/.poetry/bin/poetry"
 
-export GOPATH=/Users/patrick/.go
-export GOBIN=$GOPATH/bin
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -127,14 +127,16 @@ if [ -f '/Users/patrick/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/patrick/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/patrick/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-set_iterm_title ""
-
 export PATH="$HOME/.poetry/bin:$PATH"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+# source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 export ANDROID_SDK_ROOT=~/Library/Android/sdk
 export ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk/23.0.7599858
 export NDK_HOME=$ANDROID_NDK_ROOT
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH="/usr/local/opt/node@14/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@14/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+export TERM=screen-256color
