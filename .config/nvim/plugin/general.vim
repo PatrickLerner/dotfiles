@@ -65,3 +65,4 @@ set foldlevel=2
 set wildignore+=.DS_Store
 set wildignore+=.git/
 set wildignore+=node_modules/
+set mouse=

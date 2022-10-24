@@ -360,16 +360,6 @@
                                     "consumer_key_code": "dictation"
                                 }
                             ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "f4"
-                            },
-                            "to": [
-                                {
-                                    "apple_vendor_keyboard_key_code": "function"
-                                }
-                            ]
                         }
                     ],
                     "identifiers": {
@@ -433,7 +423,7 @@
                     },
                     "to": [
                         {
-                            "apple_vendor_keyboard_key_code": "language"
+                            "key_code": "f4"
                         }
                     ]
                 },

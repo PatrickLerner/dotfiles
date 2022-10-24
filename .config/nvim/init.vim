@@ -76,4 +76,8 @@ call minpac#add('honza/vim-snippets')
 
 call minpac#add('towolf/vim-helm')
 
+call minpac#add('neoclide/jsonc.vim')
+
+call minpac#add('hashivim/vim-terraform')
+
 filetype plugin indent on
